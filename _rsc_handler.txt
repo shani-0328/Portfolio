@@ -1,0 +1,3 @@
+// This is an empty file that Next.js will use as a placeholder
+// for RSC (React Server Component) endpoints in static exports
+// It helps prevent 404 errors for .txt files with _rsc query parameters
