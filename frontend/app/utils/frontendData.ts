@@ -1,4 +1,5 @@
 import { Portfolio, Project, Skill, Contact } from './apiHooks';
+import { getAssetPath } from './assetPath';
 
 // Frontend data sources - moved from apiHooks.ts for better organization
 export const frontendPortfolioData: Portfolio = {
@@ -8,8 +9,8 @@ export const frontendPortfolioData: Portfolio = {
   bio: 'I am a full-stack software engineer with 3+ years of experience building scalable web applications using Laravel, PHP, JavaScript, and React. At Zeldiva Solutions, I led backend and API development that boosted performance and user engagement. I have developed end-to-end systems like booking platforms, stock management tools, and hardware solutions for global clients. I am passionate about clean code, responsive UI design, and continuously learning—currently diving into Ruby to broaden my tech stack.',
   email: 'madu.0502@gmail.com',
   phone: '+94 71 012 9795',
-  address: 'Kandy, Sri Lanka',  photo: '/images/profile.jpg',
-  resume: '/files/resume.pdf',
+  address: 'Kandy, Sri Lanka',  photo: getAssetPath('/images/profile.jpg'),
+  resume: getAssetPath('/files/resume.pdf'),
   social_media: {
     github: 'https://github.com/shani-0328',
     linkedin: 'https://www.linkedin.com/in/shanika-wijenayake-999331213',

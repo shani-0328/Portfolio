@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-// Import from frontendData instead of using axios
 import { frontendPortfolioData } from '../utils/frontendData';
+import { getAssetPath } from '../utils/assetPath';
 
 interface Portfolio {
   name: string;
@@ -244,7 +244,7 @@ export default function HeroRetroModernEnhanced() {
               <div className="absolute inset-12 overflow-hidden rounded-full border-4 border-white/80 shadow-2xl shadow-cyan-700/30 glitch-image-wrap profile-shadow-effect">
               {/* Use standard img tag to avoid Next.js Image issues */}
               <img
-                src="/images/profile.jpg" 
+                src={getAssetPath(portfolio?.photo || '/images/profile.jpg')} 
                 alt={portfolio?.name || 'Developer'}
                 className="object-cover w-full h-full profile-zoom"
                 style={{ transform: 'scale(1.05)' }}
