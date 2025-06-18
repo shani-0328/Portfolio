@@ -4,7 +4,7 @@ import Image from 'next/image';
 import RetroSection from './RetroSection';
 import RetroCard from './RetroCard';
 import RetroButton from './RetroButton';
-import { useProjects, Project } from '../utils/apiHooks';
+import { useProjects } from '../utils/apiHooks';
 
 export default function Projects() {
   const { data: projects, isLoading, error } = useProjects();

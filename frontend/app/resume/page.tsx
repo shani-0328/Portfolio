@@ -33,7 +33,7 @@ export default function ResumePage() {
       <div className="text-center">
         <h1 className="text-3xl font-bold mb-4">Downloading Resume...</h1>
         <p className="mb-6">Your download should start automatically.</p>
-        <p>If the download doesn't begin, <a href={portfolio?.resume} download className="text-blue-400 underline">click here</a>.</p>
+        <p>If the download doesn&apos;t begin, <a href={portfolio?.resume} download className="text-blue-400 underline">click here</a>.</p>
       </div>
     </div>
   );

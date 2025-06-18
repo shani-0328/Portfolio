@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 // Import from frontendData instead of using axios
 import { frontendPortfolioData } from '../utils/frontendData';
 
@@ -21,7 +20,7 @@ interface Portfolio {
 export default function HeroRetroModernEnhanced() {
   const [portfolio, setPortfolio] = useState<Portfolio | null>(null);
   const [loading, setLoading] = useState(true);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const heroRef = useRef<HTMLDivElement>(null);
 
   // Handle mouse position for interactive effects
@@ -30,7 +29,7 @@ export default function HeroRetroModernEnhanced() {
       const rect = heroRef.current.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
       const y = ((e.clientY - rect.top) / rect.height) * 100;
-      setMousePosition({ x, y });
+      // setMousePosition({ x, y });
 
       // Update CSS variables for interactive glow effects
       heroRef.current.style.setProperty('--x', `${x}%`);
@@ -95,7 +94,7 @@ export default function HeroRetroModernEnhanced() {
         {/* Left side - text content */}
         <div className="md:w-1/2 mb-12 md:mb-0 md:pr-10">
           <h1 className="font-[family-name:var(--font-orbitron)] text-5xl md:text-6xl font-bold mb-4 holographic-text">
-            <span className="block">Hi, I'm</span>
+            <span className="block">Hi, I&apos;m</span>
             <span className="block mt-2 flicker-text">{portfolio?.name || 'Shanika Wijenayake'}</span>
           </h1>
 
@@ -115,11 +114,11 @@ export default function HeroRetroModernEnhanced() {
             <div className="font-[family-name:var(--font-geist-mono)] text-white text-opacity-90 data-stream">
               <span className="text-cyan-400">const</span> <span className="text-green-400">developer</span> = {"{"}
               <br />
-              &nbsp;&nbsp;<span className="text-yellow-300">skills</span>: <span className="text-blue-300">"Full-stack development"</span>,
+              &nbsp;&nbsp;<span className="text-yellow-300">skills</span>: <span className="text-blue-300">&quot;Full-stack development&quot;</span>,
               <br />
-              &nbsp;&nbsp;<span className="text-yellow-300">passion</span>: <span className="text-blue-300">"Clean code & beautiful UIs"</span>,
+              &nbsp;&nbsp;<span className="text-yellow-300">passion</span>: <span className="text-blue-300">&quot;Clean code & beautiful UIs&quot;</span>,
               <br />
-              &nbsp;&nbsp;<span className="text-yellow-300">specialty</span>: <span className="text-blue-300">"Modern frameworks & techniques"</span>
+              &nbsp;&nbsp;<span className="text-yellow-300">specialty</span>: <span className="text-blue-300">&quot;Modern frameworks & techniques&quot;</span>
               <br />
               {"}"};
             </div>

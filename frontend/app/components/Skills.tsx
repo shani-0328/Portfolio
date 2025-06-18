@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import RetroSection from './RetroSection';
 import RetroCard from './RetroCard';
-import { useSkills, Skill } from '../utils/apiHooks';
+import { useSkills } from '../utils/apiHooks';
 
 export default function Skills() {
   const { data: skillsData, isLoading, error } = useSkills();

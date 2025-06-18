@@ -3,7 +3,7 @@
 import RetroSection from './RetroSection';
 import RetroCard from './RetroCard';
 import RetroButton from './RetroButton';
-import { usePortfolio, Portfolio } from '../utils/apiHooks';
+import { usePortfolio } from '../utils/apiHooks';
 
 export default function About() {
   const { data: portfolio, isLoading, error } = usePortfolio();
@@ -48,7 +48,7 @@ export default function About() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
         <RetroCard variant="glass" className="p-8">
           <h3 className="text-2xl font-bold font-[family-name:var(--font-orbitron)] mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-cyan-600">
-            Hello, I'm <span className="holographic-text">{portfolio.name}</span>
+            Hello, I&apos;m <span className="holographic-text">{portfolio.name}</span>
           </h3>
           <h4 className="text-xl text-indigo-600 mb-6 font-[family-name:var(--font-vt323)]">{portfolio.title}</h4>
           <p className="text-lg text-white mb-8 leading-relaxed data-stream">
