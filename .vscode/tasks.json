@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start Backend Server",
+			"type": "shell",
+			"command": "cd ${workspaceFolder}/backend && php artisan serve",
+			"group": "none",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start Frontend Server",
+			"type": "shell",
+			"command": "cd ${workspaceFolder}/frontend && npm run dev",
+			"group": "none",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start All Servers",
+			"dependsOn": ["Start Backend Server", "Start Frontend Server"],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

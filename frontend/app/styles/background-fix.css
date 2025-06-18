@@ -1,0 +1,85 @@
+/**
+ * Fix for background styling issues when the project is moved to a different environment
+ */
+
+/* Enhance visibility of backgrounds in About and Contact sections */
+section[id="about"], 
+section[id="contact"] {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Force background gradients to be more visible */
+.bg-gradient-to-br,
+.bg-gradient-to-r {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+}
+
+/* Increase opacity for background elements */
+.cyber-circuit::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 50% 50%, transparent 90%, rgba(0, 255, 255, 0.1) 90%),
+    linear-gradient(90deg, transparent 90%, rgba(255, 0, 255, 0.1) 90%),
+    linear-gradient(0deg, transparent 90%, rgba(0, 255, 255, 0.1) 90%);
+  background-size: 20px 20px, 20px 20px, 20px 20px;
+  animation: circuitMove 30s linear infinite;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.scanline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2)
+  );
+  background-size: 100% 4px;
+  animation: scanlines 1s linear infinite;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Dark section backgrounds */
+section[id="about"].bg-gradient-to-br,
+section[id="contact"].bg-gradient-to-br {
+  background: linear-gradient(to bottom right, #0f0f35, #331a6a) !important;
+  color: white;
+}
+
+/* Light section backgrounds */
+section[id].bg-gradient-to-r {
+  background: linear-gradient(to right, rgba(26, 16, 63, 0.1), rgba(51, 26, 106, 0.1)) !important;
+  color: #111827;
+}
+
+/* Create keyframe animation if it doesn't exist */
+@keyframes circuitMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
+@keyframes scanlines {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 4px;
+  }
+}

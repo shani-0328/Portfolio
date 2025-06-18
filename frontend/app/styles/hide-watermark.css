@@ -1,0 +1,16 @@
+/* Hide the Vercel deployment button/watermark */
+#vercel-deployment-badge {
+  display: none !important;
+}
+
+/* Target the button with the "N" icon - various possible selectors */
+[data-testid="speedinsights-icon"] {
+  display: none !important;
+}
+
+/* Additional selectors to target the N button */
+[data-nextjs-stub-icon],
+a[aria-label*="Vercel"],
+div[data-testid="watermark"] {
+  display: none !important;
+}
