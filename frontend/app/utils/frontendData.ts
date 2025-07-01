@@ -26,7 +26,7 @@ export const frontendProjectsData: Project[] = [
     title: 'E-commerce Platform for Tyre House',
     description: 'An internal management system for Tyre House operations including stock, sales, and invoicing.React frontend ensures a smooth, responsive interface for daily tasks.Laravel backend handles secure data processing, user roles, and workflow automation.',
     technologies: '["React", "Node.js", "MySql", "Laravel", "Tailwind CSS"]',
-    image: 'image_2.png',
+    image: getAssetPath('/images/projects/image_2.png'),
     url: '',
     github_url: 'https://github.com/RandikaMa/Jayasanka-Tyre',
     featured: true,
@@ -38,7 +38,7 @@ export const frontendProjectsData: Project[] = [
     title: 'Yacht Story – Yacht Booking Platformp',
     description: 'A custom yacht booking platform to manage reservations, schedules, and customer details.Developed using Laravel with Blade templating and JavaScript for interactive user experience.MySQL ensures reliable storage of booking data, client records, and yacht availability.',
     technologies: '["Laravel", "Java Script", "MySql", "Tailwind CSS"]',
-    image: 'image.png',
+    image: getAssetPath('/images/projects/image.png'),
     url: 'https://yachtstory.com/',
     github_url: '',
     featured: true,
@@ -50,7 +50,7 @@ export const frontendProjectsData: Project[] = [
     title: 'Hardware and Construction Management System',
     description: 'A comprehensive system to manage hardware inventory, supplier orders, and construction project tracking.Vue.js provides a dynamic and responsive user interface for efficient daily operations.Laravel and MySQL power secure data handling, role-based access, and real-time reporting.',
     technologies: '["Vue", "Laravel", "React", "TypeScript" , "MySql"]',
-    image: 'image_3.png',
+    image: getAssetPath('/images/projects/image_3.png'),
     url: 'https://thefloorstorepanel.com/login',
     github_url: '',
     featured: false,
@@ -62,7 +62,7 @@ export const frontendProjectsData: Project[] = [
     title: 'AI Content Generator',
     description: 'An AI-powered application that generates marketing content based on user inputs. Integrates with OpenAI API and provides custom templates.',
     technologies: '["Python", "React", "Flask", "OpenAI API", "PostgreSQL"]',
-    image: 'ai-content.jpg',
+    image: getAssetPath('/images/projects/ai-content.jpg'),
     url: 'https://example.com/ai-content',
     github_url: 'https://github.com/username/ai-content',
     featured: true,
@@ -72,18 +72,18 @@ export const frontendProjectsData: Project[] = [
 ];
 
 export const frontendSkillsData: Skill[] = [
-  { id: 1, name: 'JavaScript', proficiency: 90, icon: '/images/skills/JavaScript-01.svg', category: 'Frontend', created_at: '2025-01-01', updated_at: '2025-01-01' },
-  { id: 2, name: 'React', proficiency: 85, icon: '/images/skills/react.svg', category: 'Frontend', created_at: '2025-01-01', updated_at: '2025-01-01' },
-  { id: 3, name: 'TypeScript', proficiency: 80, icon: '/images/skills/typescript.svg', category: 'Frontend', created_at: '2025-01-01', updated_at: '2025-01-01' },
-  { id: 4, name: 'Next.js', proficiency: 75, icon: '/images/skills/nextjs.svg', category: 'Frontend', created_at: '2025-01-01', updated_at: '2025-01-01' },
-  { id: 5, name: 'Node.js', proficiency: 85, icon: '/images/skills/nodejs.svg', category: 'Backend', created_at: '2025-01-01', updated_at: '2025-01-01' },
-  { id: 6, name: 'PHP', proficiency: 80, icon: '/images/skills/php.svg', category: 'Backend', created_at: '2025-01-01', updated_at: '2025-01-01' },
-  { id: 7, name: 'Laravel', proficiency: 85, icon: '/images/skills/laravel.svg', category: 'Backend', created_at: '2025-01-01', updated_at: '2025-01-01' },
-  { id: 8, name: 'MySQL', proficiency: 75, icon: '/images/skills/mysql.svg', category: 'Database', created_at: '2025-01-01', updated_at: '2025-01-01' },
-  { id: 9, name: 'MongoDB', proficiency: 70, icon: '/images/skills/mongodb.svg', category: 'Database', created_at: '2025-01-01', updated_at: '2025-01-01' },
-  { id: 10, name: 'Docker', proficiency: 65, icon: '/images/skills/docker.svg', category: 'DevOps', created_at: '2025-01-01', updated_at: '2025-01-01' },
-  { id: 11, name: 'AWS', proficiency: 70, icon: '/images/skills/aws.svg', category: 'DevOps', created_at: '2025-01-01', updated_at: '2025-01-01' },
-  { id: 12, name: 'Tailwind CSS', proficiency: 95, icon: '/images/skills/tailwind.svg', category: 'Frontend', created_at: '2025-01-01', updated_at: '2025-01-01' }
+  { id: 1, name: 'JavaScript', proficiency: 90, icon: getAssetPath('/images/skills/JavaScript-01.svg'), category: 'Frontend', created_at: '2025-01-01', updated_at: '2025-01-01' },
+  { id: 2, name: 'React', proficiency: 85, icon: getAssetPath('/images/skills/react.svg'), category: 'Frontend', created_at: '2025-01-01', updated_at: '2025-01-01' },
+  { id: 3, name: 'TypeScript', proficiency: 80, icon: getAssetPath('/images/skills/typescript.svg'), category: 'Frontend', created_at: '2025-01-01', updated_at: '2025-01-01' },
+  { id: 4, name: 'Next.js', proficiency: 75, icon: getAssetPath('/images/skills/nextjs.svg'), category: 'Frontend', created_at: '2025-01-01', updated_at: '2025-01-01' },
+  { id: 5, name: 'Node.js', proficiency: 85, icon: getAssetPath('/images/skills/nodejs.svg'), category: 'Backend', created_at: '2025-01-01', updated_at: '2025-01-01' },
+  { id: 6, name: 'PHP', proficiency: 80, icon: getAssetPath('/images/skills/php.svg'), category: 'Backend', created_at: '2025-01-01', updated_at: '2025-01-01' },
+  { id: 7, name: 'Laravel', proficiency: 85, icon: getAssetPath('/images/skills/laravel.svg'), category: 'Backend', created_at: '2025-01-01', updated_at: '2025-01-01' },
+  { id: 8, name: 'MySQL', proficiency: 75, icon: getAssetPath('/images/skills/mysql.svg'), category: 'Database', created_at: '2025-01-01', updated_at: '2025-01-01' },
+  { id: 9, name: 'MongoDB', proficiency: 70, icon: getAssetPath('/images/skills/mongodb.svg'), category: 'Database', created_at: '2025-01-01', updated_at: '2025-01-01' },
+  { id: 10, name: 'Docker', proficiency: 65, icon: getAssetPath('/images/skills/docker.svg'), category: 'DevOps', created_at: '2025-01-01', updated_at: '2025-01-01' },
+  { id: 11, name: 'AWS', proficiency: 70, icon: getAssetPath('/images/skills/aws.svg'), category: 'DevOps', created_at: '2025-01-01', updated_at: '2025-01-01' },
+  { id: 12, name: 'Tailwind CSS', proficiency: 95, icon: getAssetPath('/images/skills/tailwind.svg'), category: 'Frontend', created_at: '2025-01-01', updated_at: '2025-01-01' }
 ];
 
 // Mock contacts data for admin interface

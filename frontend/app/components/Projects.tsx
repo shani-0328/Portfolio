@@ -46,7 +46,7 @@ export default function Projects() {
             <div className="relative h-60 glitch-image-wrap">
               {project.image ? (
                 <Image
-                  src={`/images/projects/${project.image}`}
+                  src={project.image}
                   alt={project.title}
                   fill
                   style={{ objectFit: 'cover' }}
