@@ -243,7 +243,7 @@ export default function HeroRetroModernEnhanced() {
             </div>
               <div className="absolute inset-12 overflow-hidden rounded-full border-4 border-white/80 shadow-2xl shadow-cyan-700/30 glitch-image-wrap profile-shadow-effect">              {/* Use standard img tag to avoid Next.js Image issues */}
               <img
-                src={portfolio?.photo || getAssetPath('/images/profile.jpg')} 
+                src={portfolio?.photo || getAssetPath('/images/image1_1.jpg')} 
                 alt={portfolio?.name || 'Developer'}
                 className="object-cover w-full h-full profile-zoom"
                 style={{ transform: 'scale(1.05)' }}
