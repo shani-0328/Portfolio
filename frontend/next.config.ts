@@ -6,8 +6,11 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/Portfolio',  // required for GitHub Pages
-  assetPrefix: '/Portfolio/',
+  // Only apply basePath and assetPrefix in production (for GitHub Pages)
+  ...(process.env.NODE_ENV === 'production' && {
+    basePath: '/Portfolio',
+    assetPrefix: '/Portfolio/',
+  }),
 
   devIndicators: false,
   // Disable the "N" button watermark
