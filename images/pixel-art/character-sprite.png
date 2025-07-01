@@ -1,0 +1,86 @@
+/* This is a SVG representing a pixel art character sprite sheet */
+<svg width="384" height="96" viewBox="0 0 384 96" xmlns="http://www.w3.org/2000/svg">
+  <!-- Frame 1 -->
+  <g transform="translate(0, 0)">
+    <!-- Head -->
+    <rect x="36" y="12" width="24" height="24" fill="#FFCA99" />
+    <!-- Hair -->
+    <rect x="36" y="12" width="24" height="8" fill="#333" />
+    <!-- Eyes -->
+    <rect x="40" y="20" width="4" height="4" fill="#222" />
+    <rect x="52" y="20" width="4" height="4" fill="#222" />
+    <!-- Mouth -->
+    <rect x="44" y="28" width="8" height="2" fill="#FF6666" />
+    <!-- Body -->
+    <rect x="36" y="36" width="24" height="28" fill="#3F51B5" />
+    <!-- Arms -->
+    <rect x="28" y="40" width="8" height="16" fill="#FFCA99" />
+    <rect x="60" y="40" width="8" height="16" fill="#FFCA99" />
+    <!-- Legs -->
+    <rect x="36" y="64" width="8" height="20" fill="#222" />
+    <rect x="52" y="64" width="8" height="20" fill="#222" />
+  </g>
+  
+  <!-- Frame 2 -->
+  <g transform="translate(96, 0)">
+    <!-- Head -->
+    <rect x="36" y="10" width="24" height="24" fill="#FFCA99" />
+    <!-- Hair -->
+    <rect x="36" y="10" width="24" height="8" fill="#333" />
+    <!-- Eyes -->
+    <rect x="40" y="18" width="4" height="4" fill="#222" />
+    <rect x="52" y="18" width="4" height="4" fill="#222" />
+    <!-- Mouth -->
+    <rect x="44" y="26" width="8" height="2" fill="#FF6666" />
+    <!-- Body -->
+    <rect x="36" y="34" width="24" height="28" fill="#3F51B5" />
+    <!-- Arms (raised slightly) -->
+    <rect x="26" y="36" width="10" height="16" fill="#FFCA99" />
+    <rect x="60" y="36" width="10" height="16" fill="#FFCA99" />
+    <!-- Legs -->
+    <rect x="38" y="62" width="8" height="20" fill="#222" />
+    <rect x="50" y="62" width="8" height="20" fill="#222" />
+  </g>
+  
+  <!-- Frame 3 -->
+  <g transform="translate(192, 0)">
+    <!-- Head -->
+    <rect x="36" y="12" width="24" height="24" fill="#FFCA99" />
+    <!-- Hair -->
+    <rect x="36" y="12" width="24" height="8" fill="#333" />
+    <!-- Eyes -->
+    <rect x="40" y="20" width="4" height="4" fill="#222" />
+    <rect x="52" y="20" width="4" height="4" fill="#222" />
+    <!-- Mouth -->
+    <rect x="44" y="28" width="8" height="2" fill="#FF6666" />
+    <!-- Body -->
+    <rect x="36" y="36" width="24" height="28" fill="#3F51B5" />
+    <!-- Arms -->
+    <rect x="28" y="40" width="8" height="16" fill="#FFCA99" />
+    <rect x="60" y="40" width="8" height="16" fill="#FFCA99" />
+    <!-- Legs (different position) -->
+    <rect x="38" y="64" width="8" height="20" fill="#222" />
+    <rect x="50" y="64" width="8" height="20" fill="#222" />
+  </g>
+  
+  <!-- Frame 4 -->
+  <g transform="translate(288, 0)">
+    <!-- Head -->
+    <rect x="36" y="10" width="24" height="24" fill="#FFCA99" />
+    <!-- Hair -->
+    <rect x="36" y="10" width="24" height="8" fill="#333" />
+    <!-- Eyes -->
+    <rect x="40" y="18" width="4" height="4" fill="#222" />
+    <rect x="52" y="18" width="4" height="4" fill="#222" />
+    <!-- Mouth -->
+    <rect x="44" y="26" width="8" height="2" fill="#FF6666" />
+    <!-- Body -->
+    <rect x="36" y="34" width="24" height="28" fill="#3F51B5" />
+    <!-- Arms (different position) -->
+    <rect x="24" y="38" width="12" height="16" fill="#FFCA99" />
+    <rect x="60" y="38" width="12" height="16" fill="#FFCA99" />
+    <!-- Legs -->
+    <rect x="36" y="62" width="8" height="20" fill="#222" />
+    <rect x="52" y="62" width="8" height="20" fill="#222" />
+  </g>
+</svg>

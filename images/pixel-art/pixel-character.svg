@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple pixel character -->
+  <!-- Blue head -->
+  <rect x="174" y="50" width="52" height="52" fill="#4D9BE6"/>
+  <!-- Red body -->
+  <rect x="174" y="102" width="52" height="100" fill="#E57373"/>
+  <!-- Yellow arms -->
+  <rect x="124" y="124" width="50" height="24" fill="#FFCA28"/>
+  <rect x="226" y="124" width="50" height="24" fill="#FFCA28"/>
+  <!-- Brown legs -->
+  <rect x="174" y="202" width="20" height="48" fill="#8D6E63"/>
+  <rect x="206" y="202" width="20" height="48" fill="#8D6E63"/>
+</svg>
