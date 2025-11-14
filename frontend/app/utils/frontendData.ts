@@ -6,10 +6,10 @@ export const frontendPortfolioData: Portfolio = {
   id: 1,
   name: 'Shanika Wijenayake',
   title: 'Full Stack Developer',
-  bio: 'I am a full-stack software engineer with 3+ years of experience building scalable web applications using Laravel, PHP, JavaScript, and React. At Zeldiva Solutions, I led backend and API development that boosted performance and user engagement. I have developed end-to-end systems like booking platforms, stock management tools, and hardware solutions for global clients. I am passionate about clean code, responsive UI design, and continuously learning—currently diving into Ruby to broaden my tech stack.',
+  bio: 'I am a full-stack software engineer with 4+ years of experience building scalable web applications using Laravel, PHP, JavaScript, and React. At Zeldiva Solutions, I led backend and API development that boosted performance and user engagement. I have developed end-to-end systems like booking platforms, stock management tools, and hardware solutions for global clients. I am passionate about clean code, responsive UI design, and continuously learning—currently diving into Ruby to broaden my tech stack.',
   email: 'shanikawijenayakedev@gmail.com',
   phone: '+94 71 012 9795',
-  address: 'Kandy, Sri Lanka',  photo: getAssetPath('/images/profile.jpg'),
+  address: 'Kandy, Sri Lanka',  photo: getAssetPath('/images/profile2.jpeg'),
   resume: getAssetPath('/files/resume.pdf'),
   social_media: {
     github: 'https://github.com/shani-0328',
@@ -57,18 +57,18 @@ export const frontendProjectsData: Project[] = [
     created_at: '2025-01-05',
     updated_at: '2025-04-10'
   },
-  {
-    id: 4,
-    title: 'AI Content Generator',
-    description: 'An AI-powered application that generates marketing content based on user inputs. Integrates with OpenAI API and provides custom templates.',
-    technologies: '["Python", "React", "Flask", "OpenAI API", "PostgreSQL"]',
-    image: getAssetPath('/images/projects/ai-content.jpg'),
-    url: 'https://example.com/ai-content',
-    github_url: 'https://github.com/username/ai-content',
-    featured: true,
-    created_at: '2025-02-18',
-    updated_at: '2025-05-30'
-  }
+  // {
+  //   id: 4,
+  //   title: 'AI Content Generator',
+  //   description: 'An AI-powered application that generates marketing content based on user inputs. Integrates with OpenAI API and provides custom templates.',
+  //   technologies: '["Python", "React", "Flask", "OpenAI API", "PostgreSQL"]',
+  //   image: getAssetPath('/images/projects/ai-content.jpg'),
+  //   url: 'https://example.com/ai-content',
+  //   github_url: 'https://github.com/username/ai-content',
+  //   featured: true,
+  //   created_at: '2025-02-18',
+  //   updated_at: '2025-05-30'
+  // }
 ];
 
 export const frontendSkillsData: Skill[] = [

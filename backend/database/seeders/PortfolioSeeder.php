@@ -19,7 +19,7 @@ class PortfolioSeeder extends Seeder
             'email' => 'madhu.0502@example.com',
             'phone' => '+94 071 012 9795',
             'address' => 'Kandy, Sri Lanka',
-            'photo' => 'profile.jpg',
+            'photo' => 'profile2.jpg',
             'resume' => 'resume.pdf',
             'social_media' => json_encode([
                 'github' => 'https://github.com/shani-0328',

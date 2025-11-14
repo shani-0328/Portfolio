@@ -6,11 +6,13 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import ThemeForceDark from './components/ThemeForceDark';
+import SmoothScroll from './components/SmoothScroll';
 
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
       <ThemeForceDark />
+      <SmoothScroll />
       <Navbar />
       <main>
         <HeroRetroModernEnhanced />

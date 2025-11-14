@@ -4,6 +4,8 @@ import { useState } from 'react';
 import RetroSection from './RetroSection';
 import RetroCard from './RetroCard';
 import RetroButton from './RetroButton';
+import Toast from './Toast';
+import { useToast } from '../hooks/useToast';
 import { submitContactForm } from '../utils/dataFetcher';
 
 export default function Contact() {
@@ -16,8 +18,7 @@ export default function Contact() {
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [submitMessage, setSubmitMessage] = useState('');
+  const { toast, showToast, hideToast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -60,10 +61,12 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!validateForm()) return;
+    if (!validateForm()) {
+      showToast('Please fill in all required fields correctly', 'error');
+      return;
+    }
 
     setIsSubmitting(true);
-    setSubmitStatus('idle');
     try {
       // Using our dataFetcher utility to submit the contact form
       await submitContactForm({
@@ -72,34 +75,31 @@ export default function Contact() {
         message: formData.message
       });
       
-      setSubmitStatus('success');
-      setSubmitMessage('Thank you! Your message has been sent successfully.');
+      showToast('Thank you! Your message has been sent successfully. 🎉', 'success');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       console.error('Error sending message:', error);
-      setSubmitStatus('error');
-      setSubmitMessage('There was an error sending your message. Please try again later.');
+      showToast('There was an error sending your message. Please try again later.', 'error');
     } finally {
       setIsSubmitting(false);
-
-      // Reset status after 5 seconds
-      setTimeout(() => {
-        if (setSubmitStatus) { // Check if component is still mounted
-          setSubmitStatus('idle');
-          setSubmitMessage('');
-        }
-      }, 5000);
     }
   };
 
   return (
-    <RetroSection id="contact" title="Get In Touch" variant="light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto text-center mb-12">
-          Have a question or want to work together? Feel free to contact me!
-        </p>
+    <>
+      <Toast 
+        message={toast.message}
+        type={toast.type}
+        isVisible={toast.isVisible}
+        onClose={hideToast}
+      />
+      <RetroSection id="contact" title="Get In Touch" variant="light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto text-center mb-12">
+            Have a question or want to work together? Feel free to contact me!
+          </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <RetroCard variant="glass" className="p-8">
             <h3 className="text-2xl font-bold font-[family-name:var(--font-orbitron)] mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
               Contact Information
@@ -126,7 +126,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-gray-200 font-[family-name:var(--font-orbitron)]">Email</h4>
-                  <p className="text-gray-400 mt-1" style={{ fontFamily: 'var(--font-geist-mono)' }}>madu.shanika0502@gmail.com</p>
+                  <p className="text-gray-400 mt-1" style={{ fontFamily: 'var(--font-geist-mono)' }}>shanikawijenayakedev@gmail.com</p>
                 </div>
               </div>
 
@@ -138,7 +138,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-gray-200 font-[family-name:var(--font-orbitron)]">Phone</h4>
-                  <p className="text-gray-400 mt-1 font-[family-name:var(--font-geist-mono)]">+94 74 042 4409</p>
+                  <p className="text-gray-400 mt-1 font-[family-name:var(--font-geist-mono)]">+94 71 012 9795</p>
                 </div>
               </div>
             </div>
@@ -245,21 +245,21 @@ export default function Contact() {
                 variant="primary"
                 fullWidth
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </span>
+                ) : 'Send Message'}
               </RetroButton>
-
-              {submitStatus !== 'idle' && (
-                <div className={`mt-4 p-3 rounded-lg ${submitStatus === 'success'
-                  ? 'bg-gradient-to-r from-green-400/20 to-emerald-400/20 border border-green-400/30 text-green-600'
-                  : 'bg-gradient-to-r from-red-400/20 to-pink-400/20 border border-red-400/30 text-red-600'
-                  }`}>
-                  {submitMessage}
-                </div>
-              )}
             </form>
           </RetroCard>
+          </div>
         </div>
-      </div>
-    </RetroSection>
+      </RetroSection>
+    </>
   );
 }
