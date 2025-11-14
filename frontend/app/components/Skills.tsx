@@ -1,9 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import RetroSection from './RetroSection';
 import RetroCard from './RetroCard';
 import { useSkills } from '../utils/apiHooks';
+import { SkillCardSkeleton } from './SkeletonLoader';
 
 export default function Skills() {
   const { data: skillsData, isLoading, error } = useSkills();
@@ -24,9 +26,13 @@ export default function Skills() {
     : [];
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center py-16">
-        <div className="cyber-spinner h-20 w-20"></div>
-      </div>
+      <RetroSection id="skills" title="My Skills" variant="dark">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[...Array(6)].map((_, i) => (
+            <SkillCardSkeleton key={i} />
+          ))}
+        </div>
+      </RetroSection>
     );
   }
   
@@ -57,8 +63,10 @@ export default function Skills() {
         {/* Category Filter */}
         <div className="flex justify-center flex-wrap gap-4 mb-12">
           {categories.map((category, index) => (
-            <button
+            <motion.button
               key={index}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => setActiveCategory(category)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === category
@@ -67,13 +75,28 @@ export default function Skills() {
               }`}
             >
               {category}
-            </button>
+            </motion.button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredSkills.map((skill) => (
-            <RetroCard key={skill.id} variant="dark" className="p-6 hover-scale hover-glow">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            layout
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {filteredSkills.map((skill, index) => (
+              <motion.div
+                key={skill.id}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+              >
+                <RetroCard variant="dark" className="p-6 hover-scale hover-glow">
               <div className="flex items-center mb-4">                {skill.icon ? (
                   <div className="relative mr-4">
                     <div className="absolute inset-0 bg-cyan-500 opacity-20 rounded-full filter blur-md animate-pulse"></div>
@@ -123,8 +146,10 @@ export default function Skills() {
                 </div>
               )}
             </RetroCard>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
+      </AnimatePresence>
       </div>
     </RetroSection>
   );

@@ -9,6 +9,7 @@
 
 html {
   color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: light) {
@@ -79,6 +80,29 @@ body {
   }
 }
 
+@keyframes float-rotate-delay-1 {
+  animation-delay: 0.5s;
+}
+
+@keyframes float-rotate-delay-2 {
+  animation-delay: 1s;
+}
+
+@keyframes float-rotate-delay-3 {
+  animation-delay: 1.5s;
+}
+
+/* Shimmer effect for skeleton loaders */
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Professional profile element classes */
 .rotating-border {
   animation: rotate-border 20s linear infinite;
 }
@@ -125,14 +149,27 @@ body {
   animation: float-rotate 3s ease-in-out infinite;
 }
 
-.float-rotate-delay-1 {
-  animation-delay: 0.5s;
+/* Smooth transitions for interactive elements */
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.float-rotate-delay-2 {
-  animation-delay: 1s;
+.hover-scale:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
 }
 
-.float-rotate-delay-3 {
-  animation-delay: 1.5s;
+/* Search input focus effects */
+.search-input:focus-within {
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+}
+
+/* Project card hover effects */
+.project-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card-hover:hover {
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.4);
 }

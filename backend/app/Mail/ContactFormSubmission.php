@@ -34,7 +34,7 @@ class ContactFormSubmission extends Mailable
     {
         return new Envelope(
             subject: 'New Contact Form Submission: ' . $this->contact->subject,
-            to: 'madu.shanika0502@gmail.com',
+            to: 'shanikawijenayakedev@gmail.com',
             replyTo: $this->contact->email,
         );
     }
