@@ -9,10 +9,10 @@ export function getAssetPath(path: string): string {
     return path;
   }
   
-  const basePath = process.env.NODE_ENV === 'production' ? '/Portfolio' : '';
+  const basePath = process.env.NODE_ENV === 'production' ? 'https://shani-0328.github.io/Portfolio' : '';
   
   // If we're in production and the path already includes the basePath, don't add it again
-  if (process.env.NODE_ENV === 'production' && path.includes('/Portfolio')) {
+  if (process.env.NODE_ENV === 'production' && path.includes('https://shani-0328.github.io/Portfolio')) {
     return path;
   }
   
