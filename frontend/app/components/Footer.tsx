@@ -1,7 +1,7 @@
 'use client';
 
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import Link from 'next/link';
+import { scrollToSection } from '../utils/scrollToSection';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -48,24 +48,36 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4 font-[family-name:var(--font-orbitron)] text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400 neon-glow-text">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/#about" className="text-cyan-300 hover:text-white hover-glow block font-[family-name:var(--font-vt323)] text-lg">
+                <button 
+                  onClick={() => scrollToSection('about')}
+                  className="text-cyan-300 hover:text-white hover-glow block font-[family-name:var(--font-vt323)] text-lg bg-transparent border-none cursor-pointer text-left p-0"
+                >
                   About
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="/#projects" className="text-cyan-300 hover:text-white hover-glow block font-[family-name:var(--font-vt323)] text-lg">
+                <button 
+                  onClick={() => scrollToSection('projects')}
+                  className="text-cyan-300 hover:text-white hover-glow block font-[family-name:var(--font-vt323)] text-lg bg-transparent border-none cursor-pointer text-left p-0"
+                >
                   Projects
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="/#skills" className="text-cyan-300 hover:text-white hover-glow block font-[family-name:var(--font-vt323)] text-lg">
+                <button 
+                  onClick={() => scrollToSection('skills')}
+                  className="text-cyan-300 hover:text-white hover-glow block font-[family-name:var(--font-vt323)] text-lg bg-transparent border-none cursor-pointer text-left p-0"
+                >
                   Skills
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="/#contact" className="text-cyan-300 hover:text-white hover-glow block font-[family-name:var(--font-vt323)] text-lg">
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="text-cyan-300 hover:text-white hover-glow block font-[family-name:var(--font-vt323)] text-lg bg-transparent border-none cursor-pointer text-left p-0"
+                >
                   Contact
-                </Link>
+                </button>
               </li>
             </ul>
           </div>

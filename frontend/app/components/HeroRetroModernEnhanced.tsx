@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { frontendPortfolioData } from '../utils/frontendData';
 import { getAssetPath } from '../utils/assetPath';
+import { scrollToSection } from '../utils/scrollToSection';
 
 interface Portfolio {
   name: string;
@@ -125,24 +126,24 @@ export default function HeroRetroModernEnhanced() {
           </div>
           {/* Enhanced buttons */}
           <div className="flex flex-wrap gap-4">
-            <a
-              href="#contact"
-              className="font-[family-name:var(--font-orbitron)] px-8 py-3 bg-gradient-to-r from-blue-400 to-blue-600 text-white font-medium rounded-md shadow-lg shadow-blue-600/30 transition-all duration-300 flex items-center button-3d interactive-glow"
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="font-[family-name:var(--font-orbitron)] px-8 py-3 bg-gradient-to-r from-blue-400 to-blue-600 text-white font-medium rounded-md shadow-lg shadow-blue-600/30 transition-all duration-300 flex items-center button-3d interactive-glow cursor-pointer border-none"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M14.243 5.757a6 6 0 10-8.486 8.486l4.243 4.243 4.243-4.243a6 6 0 000-8.486z" clipRule="evenodd" />
               </svg>
               Get In Touch
-            </a>
-            <a
-              href="#projects"
-              className="font-[family-name:var(--font-orbitron)] px-8 py-3 bg-gradient-to-r from-cyan-400/80 to-cyan-600/80 text-white rounded-md flex items-center shadow-lg shadow-cyan-600/30 hover:-translate-y-1 transition-all duration-300"
+            </button>
+            <button
+              onClick={() => scrollToSection('projects')}
+              className="font-[family-name:var(--font-orbitron)] px-8 py-3 bg-gradient-to-r from-cyan-400/80 to-cyan-600/80 text-white rounded-md flex items-center shadow-lg shadow-cyan-600/30 hover:-translate-y-1 transition-all duration-300 cursor-pointer border-none"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
               </svg>
               View Projects
-            </a>            <a
+            </button>            <a
               href="/resume"
               className="font-[family-name:var(--font-orbitron)] px-8 py-3 bg-gradient-to-r from-amber-400/20 to-amber-500/20 text-yellow-300 border-2 border-yellow-400/70 rounded-md hover:bg-yellow-500/20 transition-all duration-300 flex items-center shadow-lg shadow-amber-900/20"
             >

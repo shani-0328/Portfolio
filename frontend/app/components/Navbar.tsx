@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import RetroButton from './RetroButton';
+import { scrollToSection } from '../utils/scrollToSection';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,18 +39,30 @@ export default function Navbar() {
           
           {/* Desktop menu */}
           <div className="hidden md:flex md:space-x-8 md:items-center">
-            <Link href="/#about" className="text-cyan-300 hover:text-white hover-glow px-3 py-2 font-[family-name:var(--font-orbitron)] text-sm font-medium transition-all duration-300">
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="text-cyan-300 hover:text-white hover-glow px-3 py-2 font-[family-name:var(--font-orbitron)] text-sm font-medium transition-all duration-300 bg-transparent border-none cursor-pointer"
+            >
               About
-            </Link>
-            <Link href="/#projects" className="text-cyan-300 hover:text-white hover-glow px-3 py-2 font-[family-name:var(--font-orbitron)] text-sm font-medium transition-all duration-300">
+            </button>
+            <button 
+              onClick={() => scrollToSection('projects')}
+              className="text-cyan-300 hover:text-white hover-glow px-3 py-2 font-[family-name:var(--font-orbitron)] text-sm font-medium transition-all duration-300 bg-transparent border-none cursor-pointer"
+            >
               Projects
-            </Link>
-            <Link href="/#skills" className="text-cyan-300 hover:text-white hover-glow px-3 py-2 font-[family-name:var(--font-orbitron)] text-sm font-medium transition-all duration-300">
+            </button>
+            <button 
+              onClick={() => scrollToSection('skills')}
+              className="text-cyan-300 hover:text-white hover-glow px-3 py-2 font-[family-name:var(--font-orbitron)] text-sm font-medium transition-all duration-300 bg-transparent border-none cursor-pointer"
+            >
               Skills
-            </Link>
-            <Link href="/#contact" className="text-cyan-300 hover:text-white hover-glow px-3 py-2 font-[family-name:var(--font-orbitron)] text-sm font-medium transition-all duration-300">
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="text-cyan-300 hover:text-white hover-glow px-3 py-2 font-[family-name:var(--font-orbitron)] text-sm font-medium transition-all duration-300 bg-transparent border-none cursor-pointer"
+            >
               Contact
-            </Link>
+            </button>
             <RetroButton href="/resume" variant="primary" className="text-sm">
               Resume
             </RetroButton>
@@ -60,34 +73,42 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/80 backdrop-blur-lg border-t border-cyan-500/30">
-            <Link 
-              href="/#about" 
-              className="block text-cyan-300 hover:text-white font-[family-name:var(--font-orbitron)] hover-glow px-3 py-2 rounded-md text-base font-medium transition-all duration-300"
-              onClick={() => setIsMenuOpen(false)}
+            <button 
+              onClick={() => {
+                scrollToSection('about');
+                setIsMenuOpen(false);
+              }}
+              className="block text-cyan-300 hover:text-white font-[family-name:var(--font-orbitron)] hover-glow px-3 py-2 rounded-md text-base font-medium transition-all duration-300 w-full text-left bg-transparent border-none cursor-pointer"
             >
               About
-            </Link>
-            <Link 
-              href="/#projects" 
-              className="block text-cyan-300 hover:text-white font-[family-name:var(--font-orbitron)] hover-glow px-3 py-2 rounded-md text-base font-medium transition-all duration-300"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('projects');
+                setIsMenuOpen(false);
+              }}
+              className="block text-cyan-300 hover:text-white font-[family-name:var(--font-orbitron)] hover-glow px-3 py-2 rounded-md text-base font-medium transition-all duration-300 w-full text-left bg-transparent border-none cursor-pointer"
             >
               Projects
-            </Link>
-            <Link 
-              href="/#skills" 
-              className="block text-cyan-300 hover:text-white font-[family-name:var(--font-orbitron)] hover-glow px-3 py-2 rounded-md text-base font-medium transition-all duration-300"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('skills');
+                setIsMenuOpen(false);
+              }}
+              className="block text-cyan-300 hover:text-white font-[family-name:var(--font-orbitron)] hover-glow px-3 py-2 rounded-md text-base font-medium transition-all duration-300 w-full text-left bg-transparent border-none cursor-pointer"
             >
               Skills
-            </Link>
-            <Link 
-              href="/#contact" 
-              className="block text-cyan-300 hover:text-white font-[family-name:var(--font-orbitron)] hover-glow px-3 py-2 rounded-md text-base font-medium transition-all duration-300"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('contact');
+                setIsMenuOpen(false);
+              }}
+              className="block text-cyan-300 hover:text-white font-[family-name:var(--font-orbitron)] hover-glow px-3 py-2 rounded-md text-base font-medium transition-all duration-300 w-full text-left bg-transparent border-none cursor-pointer"
             >
               Contact
-            </Link>
+            </button>
             <div onClick={() => setIsMenuOpen(false)} className="px-3 py-2">
               <RetroButton href="/resume" variant="primary" className="text-sm w-full">
                 Resume

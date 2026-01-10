@@ -9,22 +9,33 @@ export default function ResumePage() {
   const { data: portfolio } = usePortfolio();
   const downloadInitiated = useRef(false);
 
+  const handleDownload = async (resumeUrl: string) => {
+    try {
+      const response = await fetch(resumeUrl);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Shanika_Wijenayake_Resume.pdf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      window.open(resumeUrl, '_blank');
+    }
+  };
+
   useEffect(() => {
     if (portfolio && !downloadInitiated.current) {
       downloadInitiated.current = true;
 
-      // Create an anchor element and trigger download
-      const link = document.createElement('a');
-      link.href = portfolio.resume;
-      link.setAttribute('download', 'resume.pdf');
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      // Navigate back to home page after a short delay
-      setTimeout(() => {
-        router.push('/');
-      }, 500);
+      handleDownload(portfolio.resume).then(() => {
+        setTimeout(() => {
+          router.push('/');
+        }, 500);
+      });
     }
   }, [portfolio, router]);
 
@@ -33,7 +44,16 @@ export default function ResumePage() {
       <div className="text-center">
         <h1 className="text-3xl font-bold mb-4">Downloading Resume...</h1>
         <p className="mb-6">Your download should start automatically.</p>
-        <p>If the download doesn&apos;t begin, <a href={portfolio?.resume} download className="text-blue-400 underline">click here</a>.</p>
+        <p>
+          If the download doesn&apos;t begin,{' '}
+          <button
+            onClick={() => portfolio && handleDownload(portfolio.resume)}
+            className="text-blue-400 underline cursor-pointer bg-transparent border-none"
+          >
+            click here
+          </button>
+          .
+        </p>
       </div>
     </div>
   );

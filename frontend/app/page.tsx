@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HeroRetroModernEnhanced from './components/HeroRetroModernEnhanced';
@@ -7,8 +10,13 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import ThemeForceDark from './components/ThemeForceDark';
 import SmoothScroll from './components/SmoothScroll';
+import { handleHashNavigation } from './utils/scrollToSection';
 
 export default function Home() {
+  useEffect(() => {
+    handleHashNavigation();
+  }, []);
+
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
       <ThemeForceDark />
