@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 interface RetroButtonProps {
   children: React.ReactNode;
@@ -49,16 +50,37 @@ export default function RetroButton({
       {children}
     </>
   );
-    if (href && !disabled) {
+  
+  if (href && !disabled) {
+    // Check if it's an external link or download
+    const isExternal = href.startsWith('http') || href.startsWith('//');
+    const isDownload = download !== undefined;
+    
+    // Use regular anchor for external links or downloads
+    if (isExternal || isDownload) {
+      return (
+        <a 
+          href={href}
+          className={`${baseClasses} ${className}`}
+          onClick={onClick}
+          download={download}
+          target={isExternal ? '_blank' : undefined}
+          rel={isExternal ? 'noopener noreferrer' : undefined}
+        >
+          {buttonContent}
+        </a>
+      );
+    }
+    
+    // Use Next.js Link for internal navigation
     return (
-      <a 
+      <Link 
         href={href}
         className={`${baseClasses} ${className}`}
         onClick={onClick}
-        download={download}
       >
         {buttonContent}
-      </a>
+      </Link>
     );
   }
   
