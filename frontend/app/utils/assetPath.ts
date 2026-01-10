@@ -9,10 +9,11 @@ export function getAssetPath(path: string): string {
     return path;
   }
   
-  const basePath = process.env.NODE_ENV === 'production' ? 'https://shani-0328.github.io/Portfolio' : '';
+  // Use relative path with basePath for GitHub Pages
+  const basePath = '/Portfolio';
   
-  // If we're in production and the path already includes the basePath, don't add it again
-  if (process.env.NODE_ENV === 'production' && path.includes('https://shani-0328.github.io/Portfolio')) {
+  // If the path already includes the basePath, don't add it again
+  if (path.includes('/Portfolio')) {
     return path;
   }
   
