@@ -9,11 +9,9 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
-  // Only apply basePath and assetPrefix in production (for GitHub Pages)
-  // ...(process.env.NODE_ENV === 'production' && {
-  //   basePath: '/Portfolio',
-  //   assetPrefix: '/Portfolio/',
-  // }),
+  // Apply basePath and assetPrefix for GitHub Pages
+  basePath: '/Portfolio',
+  assetPrefix: '/Portfolio/',
 
   devIndicators: false,
   // Disable the "N" button watermark
