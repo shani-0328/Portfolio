@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100" height="120" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue head -->
+  <rect x="40" y="0" width="20" height="20" fill="#4D9BE6"/>
+  
+  <!-- Red body -->
+  <rect x="30" y="20" width="40" height="40" fill="#E57373"/>
+  
+  <!-- Yellow arms -->
+  <rect x="10" y="25" width="20" height="10" fill="#FFCA28"/>
+  <rect x="70" y="25" width="20" height="10" fill="#FFCA28"/>
+  
+  <!-- Brown legs -->
+  <rect x="35" y="60" width="10" height="30" fill="#8D6E63"/>
+  <rect x="55" y="60" width="10" height="30" fill="#8D6E63"/>
+</svg>

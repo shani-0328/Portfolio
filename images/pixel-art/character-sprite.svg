@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="384" height="288" viewBox="0 0 384 288" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Row 1: Idle Animation (4 frames, 96x96 each) -->
+  <!-- Frame 1 -->
+  <rect x="0" y="0" width="96" height="96" fill="#222034"/>
+  <rect x="36" y="20" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="36" y="44" width="24" height="32" fill="#E57373"/>
+  <rect x="28" y="52" width="8" height="16" fill="#FFCA28"/>
+  <rect x="60" y="52" width="8" height="16" fill="#FFCA28"/>
+  <rect x="36" y="76" width="8" height="12" fill="#8D6E63"/>
+  <rect x="52" y="76" width="8" height="12" fill="#8D6E63"/>
+  
+  <!-- Frame 2 -->
+  <rect x="96" y="0" width="96" height="96" fill="#222034"/>
+  <rect x="132" y="18" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="132" y="42" width="24" height="32" fill="#E57373"/>
+  <rect x="124" y="50" width="8" height="16" fill="#FFCA28"/>
+  <rect x="156" y="50" width="8" height="16" fill="#FFCA28"/>
+  <rect x="132" y="74" width="8" height="14" fill="#8D6E63"/>
+  <rect x="148" y="74" width="8" height="14" fill="#8D6E63"/>
+  
+  <!-- Frame 3 -->
+  <rect x="192" y="0" width="96" height="96" fill="#222034"/>
+  <rect x="228" y="20" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="228" y="44" width="24" height="32" fill="#E57373"/>
+  <rect x="220" y="52" width="8" height="16" fill="#FFCA28"/>
+  <rect x="252" y="52" width="8" height="16" fill="#FFCA28"/>
+  <rect x="228" y="76" width="8" height="12" fill="#8D6E63"/>
+  <rect x="244" y="76" width="8" height="12" fill="#8D6E63"/>
+  
+  <!-- Frame 4 -->
+  <rect x="288" y="0" width="96" height="96" fill="#222034"/>
+  <rect x="324" y="18" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="324" y="42" width="24" height="32" fill="#E57373"/>
+  <rect x="316" y="50" width="8" height="16" fill="#FFCA28"/>
+  <rect x="348" y="50" width="8" height="16" fill="#FFCA28"/>
+  <rect x="324" y="74" width="8" height="14" fill="#8D6E63"/>
+  <rect x="340" y="74" width="8" height="14" fill="#8D6E63"/>
+  
+  <!-- Row 2: Walking Animation (4 frames, 96x96 each) -->
+  <!-- Frame 1 -->
+  <rect x="0" y="96" width="96" height="96" fill="#222034"/>
+  <rect x="36" y="116" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="36" y="140" width="24" height="32" fill="#E57373"/>
+  <rect x="28" y="140" width="8" height="16" fill="#FFCA28"/>
+  <rect x="60" y="148" width="8" height="16" fill="#FFCA28"/>
+  <rect x="28" y="172" width="16" height="8" fill="#8D6E63"/>
+  <rect x="52" y="164" width="8" height="16" fill="#8D6E63"/>
+  
+  <!-- Frame 2 -->
+  <rect x="96" y="96" width="96" height="96" fill="#222034"/>
+  <rect x="132" y="114" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="132" y="138" width="24" height="32" fill="#E57373"/>
+  <rect x="124" y="146" width="8" height="16" fill="#FFCA28"/>
+  <rect x="156" y="146" width="8" height="16" fill="#FFCA28"/>
+  <rect x="124" y="170" width="16" height="10" fill="#8D6E63"/>
+  <rect x="148" y="162" width="16" height="10" fill="#8D6E63"/>
+  
+  <!-- Frame 3 -->
+  <rect x="192" y="96" width="96" height="96" fill="#222034"/>
+  <rect x="228" y="116" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="228" y="140" width="24" height="32" fill="#E57373"/>
+  <rect x="220" y="148" width="8" height="16" fill="#FFCA28"/>
+  <rect x="252" y="140" width="8" height="16" fill="#FFCA28"/>
+  <rect x="220" y="164" width="16" height="8" fill="#8D6E63"/>
+  <rect x="244" y="172" width="16" height="8" fill="#8D6E63"/>
+  
+  <!-- Frame 4 -->
+  <rect x="288" y="96" width="96" height="96" fill="#222034"/>
+  <rect x="324" y="114" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="324" y="138" width="24" height="32" fill="#E57373"/>
+  <rect x="316" y="146" width="8" height="16" fill="#FFCA28"/>
+  <rect x="348" y="146" width="8" height="16" fill="#FFCA28"/>
+  <rect x="316" y="162" width="16" height="10" fill="#8D6E63"/>
+  <rect x="340" y="170" width="16" height="10" fill="#8D6E63"/>
+  
+  <!-- Row 3: Attack Animation (4 frames, 96x96 each) -->
+  <!-- Frame 1 -->
+  <rect x="0" y="192" width="96" height="96" fill="#222034"/>
+  <rect x="36" y="212" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="36" y="236" width="24" height="32" fill="#E57373"/>
+  <rect x="18" y="236" width="18" height="8" fill="#FFCA28"/>
+  <rect x="60" y="236" width="18" height="8" fill="#FFCA28"/>
+  <rect x="36" y="268" width="8" height="12" fill="#8D6E63"/>
+  <rect x="52" y="268" width="8" height="12" fill="#8D6E63"/>
+  
+  <!-- Frame 2 -->
+  <rect x="96" y="192" width="96" height="96" fill="#222034"/>
+  <rect x="132" y="210" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="132" y="234" width="24" height="32" fill="#E57373"/>
+  <rect x="104" y="224" width="28" height="8" fill="#FFCA28"/>
+  <rect x="156" y="244" width="28" height="8" fill="#FFCA28"/>
+  <rect x="132" y="266" width="8" height="14" fill="#8D6E63"/>
+  <rect x="148" y="266" width="8" height="14" fill="#8D6E63"/>
+  
+  <!-- Frame 3 -->
+  <rect x="192" y="192" width="96" height="96" fill="#222034"/>
+  <rect x="228" y="212" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="228" y="236" width="24" height="32" fill="#E57373"/>
+  <rect x="200" y="236" width="28" height="8" fill="#FFCA28"/>
+  <rect x="252" y="236" width="28" height="8" fill="#FFCA28"/>
+  <rect x="228" y="268" width="8" height="12" fill="#8D6E63"/>
+  <rect x="244" y="268" width="8" height="12" fill="#8D6E63"/>
+  
+  <!-- Frame 4 -->
+  <rect x="288" y="192" width="96" height="96" fill="#222034"/>
+  <rect x="324" y="210" width="24" height="24" fill="#4D9BE6"/>
+  <rect x="324" y="234" width="24" height="32" fill="#E57373"/>
+  <rect x="296" y="234" width="28" height="8" fill="#FFCA28"/>
+  <rect x="348" y="234" width="28" height="8" fill="#FFCA28"/>
+  <rect x="324" y="266" width="8" height="14" fill="#8D6E63"/>
+  <rect x="340" y="266" width="8" height="14" fill="#8D6E63"/>
+</svg>
